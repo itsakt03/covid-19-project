@@ -9,9 +9,9 @@ import plotly.graph_objects as go
 
 @st.cache
 def get_data():
-        DATA_URL = ("https://data.incovid19.org/csv/latest/case_time_series.csv")
-    DATA_URL_statewise_timeseries = ("https://data.incovid19.org/csv/latest/state_wise_daily.csv")
-    DATA_URL_statewise = ("https://data.incovid19.org/csv/latest/state_wise.csv")
+DATA_URL = ("https://data.incovid19.org/csv/latest/case_time_series.csv")
+DATA_URL_statewise_timeseries = ("https://data.incovid19.org/csv/latest/state_wise_daily.csv")
+DATA_URL_statewise = ("https://data.incovid19.org/csv/latest/state_wise.csv")
     return DATA_URL,DATA_URL_statewise,DATA_URL_statewise_timeseries
 DATA_URL,DATA_URL_statewise,DATA_URL_statewise_timeseries=get_data()
 st.title("Covid-19 in India")
@@ -139,3 +139,4 @@ for i in range(18):
     st.sidebar.markdown(" ")
 
 st.sidebar.subheader("Aryan Kumar Thakur")
+
