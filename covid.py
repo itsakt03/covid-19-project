@@ -4,8 +4,6 @@ import numpy as np
 import plotly.express as px
 import datetime
 import plotly.graph_objects as go
-
-# Using the modern cache decorator
 @st.cache_data
 def get_data():
     DATA_URL = "https://data.incovid19.org/csv/latest/case_time_series.csv"
@@ -39,7 +37,6 @@ if optionSelected == "Statewise Data":
     selectedState = st.selectbox("Select a state :", sorted(stateDict.keys()))
     series2 = series1.loc[selectedState]
     
-    # Using metrics for a cleaner look
     col1, col2, col3, col4 = st.columns(4)
     col1.metric("Confirmed", int(series2["Confirmed"]))
     col2.metric("Recovered", int(series2["Recovered"]))
@@ -81,3 +78,4 @@ elif optionSelected == "National Data":
 
 st.sidebar.markdown("---")
 st.sidebar.subheader("Aryan Kumar Thakur")
+
