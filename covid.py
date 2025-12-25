@@ -19,7 +19,6 @@ optionSelected = st.sidebar.radio("Navigation", options)
 
 if optionSelected == "Statewise Data":
     st.markdown("### Statewise Covid-19 cases in India")
-    # FIX: Removed squeeze=True to support modern Pandas
     series1 = pd.read_csv(DATA_URL_statewise, header=0, index_col=0, parse_dates=True).squeeze("columns")
     series1 = series1[["Confirmed", "Recovered", "Deaths", "Active"]]
     
@@ -78,4 +77,5 @@ elif optionSelected == "National Data":
 
 st.sidebar.markdown("---")
 st.sidebar.subheader("Aryan Kumar Thakur")
+
 
